@@ -1070,97 +1070,15 @@ namespace MiNET.Net
 		{
 			return ItemStackResponses.Read(this);
 		}
-
-		public void Write(ItemComponentList list)
-		{
-			WriteUnsignedVarInt((uint) list.Count);
-
-			foreach (var item in list)
-			{
-				Write(item.Name);
-				Write(item.Nbt);
-			}
-		}
 		
 		public ItemComponentList ReadItemComponentList()
 		{
-			var               count = ReadUnsignedVarInt();
-			ItemComponentList l     = new ItemComponentList();
-
-			for (int i = 0; i < count; i++)
-			{
-				string        name      = ReadString();
-				var           nbt       = ReadNbt();
-				
-				ItemComponent component = new ItemComponent();
-				component.Name = name;
-				component.Nbt = nbt;
-				
-				l.Add(component);
-			}
-
-			return l;
-		}
-		
-		public void Write(EnchantOptions options)
-		{
-			WriteUnsignedVarInt((uint) options.Count);
-			foreach (EnchantOption option in options)
-			{
-				WriteUnsignedVarInt(option.Cost);
-				Write(option.Flags);
-				WriteEnchants(option.EquipActivatedEnchantments);
-				WriteEnchants(option.HeldActivatedEnchantments);
-				WriteEnchants(option.SelfActivatedEnchantments);
-				Write(option.Name);
-				WriteVarInt(option.OptionId);
-			}
-		}
-
-		private void WriteEnchants(List<Enchant> enchants)
-		{
-			WriteUnsignedVarInt((uint) enchants.Count);
-			foreach (Enchant enchant in enchants)
-			{
-				Write(enchant.Id);	
-				Write(enchant.Level);	
-			}
-		}
-
-		private List<Enchant> ReadEnchants()
-		{
-			List<Enchant> enchants = new List<Enchant>();
-			var           count    = ReadUnsignedVarInt();
-
-			for (int i = 0; i < count; i++)
-			{
-				Enchant enchant = new Enchant(ReadByte(), ReadByte());
-				enchants.Add(enchant);
-			}
-
-			return enchants;
+			return ItemComponentList.Read(this);
 		}
 
 		public EnchantOptions ReadEnchantOptions()
 		{
-			var options = new EnchantOptions();
-			var count   = ReadUnsignedVarInt();
-
-			for (int i = 0; i < count; i++)
-			{
-				EnchantOption option = new EnchantOption();
-				option.Cost = ReadUnsignedVarInt();
-				option.Flags = ReadInt();
-				option.EquipActivatedEnchantments = ReadEnchants();
-				option.HeldActivatedEnchantments = ReadEnchants();
-				option.SelfActivatedEnchantments = ReadEnchants();
-				option.Name = ReadString();
-				option.OptionId = ReadVarInt();
-				
-				options.Add(option);
-			}
-			
-			return options;
+			return EnchantOptions.Read(this);
 		}
 
 		public void Write(AnimationKey[] keys)
@@ -1194,21 +1112,6 @@ namespace MiNET.Net
 			}
 
 			return keys;
-		}
-
-
-		private ItemStacks ReadItems()
-		{
-			var items = new ItemStacks();
-
-			var count = ReadUnsignedVarInt();
-
-			for (int i = 0; i < count; i++)
-			{
-				items.Add(ReadItem(false));
-			}
-
-			return items;
 		}
 
 		private const int ShieldId = 355;
