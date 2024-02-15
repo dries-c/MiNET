@@ -25,9 +25,9 @@
 
 namespace MiNET.Blocks
 {
-	public partial class Carpet : Block
+	public abstract class CarpetBase : Block
 	{
-		public Carpet() : base()
+		public CarpetBase() : base()
 		{
 			IsTransparent = true;
 			BlastResistance = 0.5f;

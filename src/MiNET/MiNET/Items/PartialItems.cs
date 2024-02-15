@@ -33,9 +33,9 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:amethyst_shard";
 	}
 
-	public partial class ItemAnglerPotteryShard : Item
+	public partial class ItemAnglerPotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:angler_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:angler_pottery_sherd";
 	}
 
 	public partial class ItemApple : FoodItemBase
@@ -43,9 +43,9 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:apple";
 	}
 
-	public partial class ItemArcherPotteryShard : Item
+	public partial class ItemArcherPotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:archer_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:archer_pottery_sherd";
 	}
 
 	public partial class ItemArmorStand : Item
@@ -53,9 +53,9 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:armor_stand";
 	}
 
-	public partial class ItemArmsUpPotteryShard : Item
+	public partial class ItemArmsUpPotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:arms_up_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:arms_up_pottery_sherd";
 	}
 
 	public partial class ItemArrow : Item
@@ -130,6 +130,10 @@ namespace MiNET.Items
 
 	public partial class ItemBeetrootSoup : FoodItemBase
 	{
+		public ItemBeetrootSoup(int foodPoints, double saturationRestore) : base(foodPoints, saturationRestore)
+		{
+		}
+
 		public override string Id { get; protected set; } = "minecraft:beetroot_soup";
 	}
 
@@ -153,9 +157,9 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:black_dye";
 	}
 
-	public partial class ItemBladePotteryShard : Item
+	public partial class ItemBladePotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:blade_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:blade_pottery_sherd";
 	}
 
 	public partial class ItemBlazePowder : Item
@@ -225,9 +229,9 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:bread";
 	}
 
-	public partial class ItemBrewerPotteryShard : Item
+	public partial class ItemBrewerPotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:brewer_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:brewer_pottery_sherd";
 	}
 
 	public partial class ItemBrick : Item
@@ -250,14 +254,19 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:bucket";
 	}
 
-	public partial class ItemBurnPotteryShard : Item
+	public partial class ItemBurnPotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:burn_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:burn_pottery_sherd";
 	}
 
 	public partial class ItemCamelSpawnEgg : ItemSpawnEggBase
 	{
 		public override string Id { get; protected set; } = "minecraft:camel_spawn_egg";
+	}
+
+	public partial class ItemCarpet : Item
+	{
+		public override string Id { get; protected set; } = "minecraft:carpet";
 	}
 
 	public partial class ItemCarrot : FoodItemBase
@@ -474,6 +483,11 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:copper_ingot";
 	}
 
+	public partial class ItemCoral : Item
+	{
+		public override string Id { get; protected set; } = "minecraft:coral";
+	}
+
 	public partial class ItemCowSpawnEgg : ItemSpawnEggBase
 	{
 		public override string Id { get; protected set; } = "minecraft:cow_spawn_egg";
@@ -504,9 +518,9 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:cyan_dye";
 	}
 
-	public partial class ItemDangerPotteryShard : Item
+	public partial class ItemDangerPotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:danger_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:danger_pottery_sherd";
 	}
 
 	public partial class ItemDarkOakBoat : ItemBoatBase
@@ -763,9 +777,9 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:experience_bottle";
 	}
 
-	public partial class ItemExplorerPotteryShard : Item
+	public partial class ItemExplorerPotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:explorer_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:explorer_pottery_sherd";
 	}
 
 	public partial class ItemEyeArmorTrimSmithingTemplate : Item
@@ -838,9 +852,9 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:fox_spawn_egg";
 	}
 
-	public partial class ItemFriendPotteryShard : Item
+	public partial class ItemFriendPotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:friend_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:friend_pottery_sherd";
 	}
 
 	public partial class ItemFrogSpawnEgg : ItemSpawnEggBase
@@ -1061,14 +1075,14 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:heart_of_the_sea";
 	}
 
-	public partial class ItemHeartPotteryShard : Item
+	public partial class ItemHeartPotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:heart_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:heart_pottery_sherd";
 	}
 
-	public partial class ItemHeartbreakPotteryShard : Item
+	public partial class ItemHeartbreakPotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:heartbreak_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:heartbreak_pottery_sherd";
 	}
 
 	public partial class ItemHoglinSpawnEgg : ItemSpawnEggBase
@@ -1101,9 +1115,9 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:host_armor_trim_smithing_template";
 	}
 
-	public partial class ItemHowlPotteryShard : Item
+	public partial class ItemHowlPotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:howl_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:howl_pottery_sherd";
 	}
 
 	public partial class ItemHuskSpawnEgg : ItemSpawnEggBase
@@ -1398,7 +1412,7 @@ namespace MiNET.Items
 
 	public partial class ItemReeds : ItemBlock
 	{
-		public override string Id { get; protected set; } = "minecraft:item.reeds";
+		public override string Id { get; protected set; } = "minecraft:reeds";
 
 		public override Block Block { get; protected set; } = new Reeds();
 	}
@@ -1628,9 +1642,9 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:minecart";
 	}
 
-	public partial class ItemMinerPotteryShard : Item
+	public partial class ItemMinerPotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:miner_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:miner_pottery_sherd";
 	}
 
 	public partial class ItemMojangBannerPattern : Item
@@ -1643,9 +1657,9 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:mooshroom_spawn_egg";
 	}
 
-	public partial class ItemMournerPotteryShard : Item
+	public partial class ItemMournerPotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:mourner_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:mourner_pottery_sherd";
 	}
 
 	public partial class ItemMuleSpawnEgg : ItemSpawnEggBase
@@ -1717,6 +1731,11 @@ namespace MiNET.Items
 	public partial class ItemMusicDiscPigstep : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:music_disc_pigstep";
+	}
+
+	public partial class ItemMusicDiscRelic : Item
+	{
+		public override string Id { get; protected set; } = "minecraft:music_disc_relic";
 	}
 
 	public partial class ItemMusicDiscStal : Item
@@ -1968,9 +1987,14 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:pink_dye";
 	}
 
-	public partial class ItemPlentyPotteryShard : Item
+	public partial class ItemPitcherPod : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:plenty_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:pitcher_pod";
+	}
+
+	public partial class ItemPlentyPotterySherd : Item
+	{
+		public override string Id { get; protected set; } = "minecraft:plenty_pottery_sherd";
 	}
 
 	public partial class ItemPoisonousPotato : Item
@@ -2018,9 +2042,9 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:prismarine_shard";
 	}
 
-	public partial class ItemPrizePotteryShard : Item
+	public partial class ItemPrizePotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:prize_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:prize_pottery_sherd";
 	}
 
 	public partial class ItemPufferfish : Item
@@ -2178,9 +2202,9 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:shaper_armor_trim_smithing_template";
 	}
 
-	public partial class ItemSheafPotteryShard : Item
+	public partial class ItemSheafPotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:sheaf_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:sheaf_pottery_sherd";
 	}
 
 	public partial class ItemShears : Item
@@ -2193,9 +2217,9 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:sheep_spawn_egg";
 	}
 
-	public partial class ItemShelterPotteryShard : Item
+	public partial class ItemShelterPotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:shelter_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:shelter_pottery_sherd";
 	}
 
 	public partial class ItemShield : Item
@@ -2238,9 +2262,9 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:skull_banner_pattern";
 	}
 
-	public partial class ItemSkullPotteryShard : Item
+	public partial class ItemSkullPotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:skull_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:skull_pottery_sherd";
 	}
 
 	public partial class ItemSlimeBall : Item
@@ -2258,9 +2282,9 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:sniffer_spawn_egg";
 	}
 
-	public partial class ItemSnortPotteryShard : Item
+	public partial class ItemSnortPotterySherd : Item
 	{
-		public override string Id { get; protected set; } = "minecraft:snort_pottery_shard";
+		public override string Id { get; protected set; } = "minecraft:snort_pottery_sherd";
 	}
 
 	public partial class ItemSnoutArmorTrimSmithingTemplate : Item

@@ -36,6 +36,8 @@ namespace MiNET.Test
 				Console.WriteLine($"Filename:\n{fileName}");
 				Log.Warn($"Writing items to filename:\n{fileName}");
 
+				writer.WriteLine("using MiNET.Blocks;");
+				writer.WriteLine();
 				writer.WriteLine($"namespace MiNET.Items");
 				writer.WriteLine($"{{");
 				writer.Indent++;

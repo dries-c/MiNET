@@ -393,6 +393,10 @@ namespace MiNET.Test
 			{
 				return nameof(WoolBase);
 			}
+			if (id.EndsWith("_carpet"))
+			{
+				return nameof(CarpetBase);
+			}
 
 			return nameof(Block);
 		}
