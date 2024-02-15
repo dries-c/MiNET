@@ -329,7 +329,7 @@ namespace MiNET.Worlds.Anvil
 
 			_mapper.Add(new BlockStateMapper("minecraft:red_sand", "minecraft:sand",
 				new AdditionalPropertyStateMapper("sand_type", "red")));
-
+			
 			#region Facing
 
 			_mapper.Add("minecraft:glow_lichen", multiFaceDirectonMap);
@@ -426,14 +426,6 @@ namespace MiNET.Worlds.Anvil
 
 			foreach (var color in _colorsList)
 				_mapper.Add(new BlockStateMapper($"minecraft:{color}_stained_glass", "minecraft:stained_glass",
-					context =>
-					{
-						context.Properties.Clear();
-						context.Properties.Add(new NbtString("color", color.Replace("light_gray", "silver")));
-					}));
-
-			foreach (var color in _colorsList)
-				_mapper.Add(new BlockStateMapper($"minecraft:{color}_carpet", "minecraft:carpet",
 					context =>
 					{
 						context.Properties.Clear();
