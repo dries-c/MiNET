@@ -397,6 +397,10 @@ namespace MiNET.Test
 			{
 				return nameof(CarpetBase);
 			}
+			if (id.StartsWith("minecraft:element_"))
+			{
+				return nameof(ElementBase);
+			}
 
 			return nameof(Block);
 		}
