@@ -1505,17 +1505,16 @@ namespace MiNET.Net
 
 			for (int runtimeId = 0; runtimeId < count; runtimeId++)
 			{
-				var record = new BlockStateContainer();
+				var record = new PaletteBlockStateContainer();
 				record.RuntimeId = runtimeId;
 				record.Id = ReadString();
-				record.States = new List<IBlockState>();
 
 				var nbt = ReadNbt(_reader);
 				var rootTag = nbt.NbtFile.RootTag;
 
 				foreach (var state in GetBlockStates(rootTag))
 				{
-					record.States.Add(state);
+					record.AddState(state);
 				}
 			}
 
@@ -1615,7 +1614,7 @@ namespace MiNET.Net
 				return;
 			}
 			WriteUnsignedVarInt((uint)palette.Count);
-			foreach (BlockStateContainer record in palette)
+			foreach (var record in palette)
 			{
 				Write(record.Id);
 				Write(record.StatesCacheNbt);
