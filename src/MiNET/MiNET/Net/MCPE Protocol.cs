@@ -47,8 +47,8 @@ namespace MiNET.Net
 {
 	public class McpeProtocolInfo
 	{
-		public const int ProtocolVersion = 618;
-		public const string GameVersion = "1.20.30";
+		public const int ProtocolVersion = 622;
+		public const string GameVersion = "1.20.40";
 	}
 
 	public interface IMcpeMessageHandler
@@ -2140,6 +2140,7 @@ namespace MiNET.Net
 	public partial class McpeDisconnect : Packet<McpeDisconnect>
 	{
 
+		public int reason; // = null;
 		public bool hideDisconnectReason; // = null;
 		public string message; // = null;
 
@@ -2155,6 +2156,7 @@ namespace MiNET.Net
 
 			BeforeEncode();
 
+			WriteVarInt(reason);
 			Write(hideDisconnectReason);
 			Write(message);
 
@@ -2170,6 +2172,7 @@ namespace MiNET.Net
 
 			BeforeDecode();
 
+			reason = ReadVarInt();
 			hideDisconnectReason = ReadBool();
 			message = ReadString();
 
@@ -2183,6 +2186,7 @@ namespace MiNET.Net
 		{
 			base.ResetPacket();
 
+			reason=default(int);
 			hideDisconnectReason=default(bool);
 			message=default(string);
 		}
