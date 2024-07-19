@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<protocol gameVersion="1.20.15" protocolVersion="594">
+<protocol gameVersion="1.20.30" protocolVersion="618">
 
 	<constants>
 		<constant id="OFFLINE_MESSAGE_DATA_ID" type="byte[]"
@@ -156,6 +156,7 @@
 		<field name="Force Server Packs" type="bool" />
 		<field name="BehahaviorPackInfos" type="ResourcePackInfos" />
 		<field name="TexturePacks" type="TexturePackInfos" />
+		<field name="Cdn Urls" type="CdnUrls" />
 	</pdu>
 
 	<pdu id="0x07" online="false" client="false" server="true" name="MCPE_RESOURCE_PACK_STACK">

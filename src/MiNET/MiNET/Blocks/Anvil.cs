@@ -24,9 +24,7 @@
 #endregion
 
 using System.Numerics;
-using MiNET.Items;
 using MiNET.Net;
-using MiNET.Utils;
 using MiNET.Utils.Vectors;
 using MiNET.Worlds;
 
@@ -44,7 +42,15 @@ namespace MiNET.Blocks
 
 		public override bool PlaceBlock(Level world, Player player, BlockCoordinates blockCoordinates, BlockFace face, Vector3 faceCoords)
 		{
-			Direction = player.GetDirection();
+			CardinalDirection = player.GetDirection() switch
+			{
+				0 => "east",
+				1 => "south",
+				2 => "west",
+				3 => "north",
+
+				_ => "east"
+			};
 
 			return false;
 		}

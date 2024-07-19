@@ -40,7 +40,7 @@ namespace MiNET.Net
 		public int y; // = null;
 		public int z; // = null;
 		public bool hasAchievementsDisabled; // = null;
-		public bool editorWorld;
+		public int editorWorldType;
 		public bool createdInEditorMode; // = null;
 		public bool exportedFromEditorMode; // = null;
 		public int time; // = null;
@@ -98,7 +98,7 @@ namespace MiNET.Net
 			packet.WriteSignedVarInt(z);
 
 			packet.Write(hasAchievementsDisabled);
-			packet.Write(editorWorld);
+			packet.WriteVarInt(editorWorldType);
 			packet.Write(createdInEditorMode);
 			packet.Write(exportedFromEditorMode);
 			packet.WriteSignedVarInt(time);
@@ -157,7 +157,7 @@ namespace MiNET.Net
 			z = packet.ReadSignedVarInt();
 
 			hasAchievementsDisabled = packet.ReadBool();
-			editorWorld = packet.ReadBool();
+			editorWorldType = packet.ReadVarInt();
 			createdInEditorMode = packet.ReadBool();
 			exportedFromEditorMode= packet.ReadBool();
 			time = packet.ReadSignedVarInt();

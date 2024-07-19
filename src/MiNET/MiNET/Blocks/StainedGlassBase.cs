@@ -25,10 +25,14 @@
 
 namespace MiNET.Blocks
 {
-	public partial class YellowGlazedTerracotta : GlazedTerracotta
+	public abstract class StainedGlassBase : Glass
 	{
-		public YellowGlazedTerracotta() : base()
+		public StainedGlassBase() : base()
 		{
+			IsTransparent = true;
+			BlastResistance = 1.5f;
+			Hardness = 0.3f;
+			IsBlockingSkylight = false;
 		}
 	}
 }

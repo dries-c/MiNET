@@ -72,7 +72,7 @@ namespace MiNET.Test
 			writer.Indent += 2;
 			writer.WriteLine();
 
-			var itemStates = ItemFactory.Itemstates;
+			var itemStates = ItemFactory.ItemStates;
 			foreach (var state in itemStates)
 			{
 				Item item = ItemFactory.GetItem(state.Value.RuntimeId);
@@ -95,7 +95,7 @@ namespace MiNET.Test
 			using FileStream file = File.OpenWrite(fileName);
 			var writer = new IndentedTextWriter(new StreamWriter(file));
 
-			var itemStates = ItemFactory.Itemstates;
+			var itemStates = ItemFactory.ItemStates;
 			var newItems = new Dictionary<string, ItemState>();
 			foreach (var state in itemStates)
 			{
@@ -469,6 +469,26 @@ namespace MiNET.Test
 			if (id.EndsWith("_concrete"))
 			{
 				return nameof(ConcreteBase);
+			}
+			if (id.EndsWith("_concrete_powder"))
+			{
+				return nameof(ConcretePowderBase);
+			}
+			if (id.EndsWith("_stained_glass"))
+			{
+				return nameof(StainedGlassBase);
+			}
+			if (id.EndsWith("_stained_glass_pane"))
+			{
+				return nameof(StainedGlassPaneBase);
+			}
+			if (id.EndsWith("_glazed_terracotta"))
+			{
+				return nameof(GlazedTerracottaBase);
+			}
+			if (id.EndsWith("_terracotta"))
+			{
+				return nameof(TerracottaBase);
 			}
 
 			return nameof(Block);

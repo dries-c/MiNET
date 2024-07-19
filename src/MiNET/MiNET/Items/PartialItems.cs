@@ -470,6 +470,11 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:black_concrete";
 	}
 
+	public partial class ItemBlackConcretePowder : ItemBlock<BlackConcretePowder>
+	{
+		public override string Id { get; protected set; } = "minecraft:black_concrete_powder";
+	}
+
 	public partial class ItemBlackDye : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:black_dye";
@@ -483,6 +488,21 @@ namespace MiNET.Items
 	public partial class ItemBlackShulkerBox : ItemBlock<BlackShulkerBox>
 	{
 		public override string Id { get; protected set; } = "minecraft:black_shulker_box";
+	}
+
+	public partial class ItemBlackStainedGlass : ItemBlock<BlackStainedGlass>
+	{
+		public override string Id { get; protected set; } = "minecraft:black_stained_glass";
+	}
+
+	public partial class ItemBlackStainedGlassPane : ItemBlock<BlackStainedGlassPane>
+	{
+		public override string Id { get; protected set; } = "minecraft:black_stained_glass_pane";
+	}
+
+	public partial class ItemBlackTerracotta : ItemBlock<BlackTerracotta>
+	{
+		public override string Id { get; protected set; } = "minecraft:black_terracotta";
 	}
 
 	public partial class ItemBlackWool : ItemBlock<BlackWool>
@@ -567,6 +587,11 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:blue_concrete";
 	}
 
+	public partial class ItemBlueConcretePowder : ItemBlock<BlueConcretePowder>
+	{
+		public override string Id { get; protected set; } = "minecraft:blue_concrete_powder";
+	}
+
 	public partial class ItemBlueDye : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:blue_dye";
@@ -585,6 +610,21 @@ namespace MiNET.Items
 	public partial class ItemBlueShulkerBox : ItemBlock<BlueShulkerBox>
 	{
 		public override string Id { get; protected set; } = "minecraft:blue_shulker_box";
+	}
+
+	public partial class ItemBlueStainedGlass : ItemBlock<BlueStainedGlass>
+	{
+		public override string Id { get; protected set; } = "minecraft:blue_stained_glass";
+	}
+
+	public partial class ItemBlueStainedGlassPane : ItemBlock<BlueStainedGlassPane>
+	{
+		public override string Id { get; protected set; } = "minecraft:blue_stained_glass_pane";
+	}
+
+	public partial class ItemBlueTerracotta : ItemBlock<BlueTerracotta>
+	{
+		public override string Id { get; protected set; } = "minecraft:blue_terracotta";
 	}
 
 	public partial class ItemBlueWool : ItemBlock<BlueWool>
@@ -696,6 +736,11 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:brown_concrete";
 	}
 
+	public partial class ItemBrownConcretePowder : ItemBlock<BrownConcretePowder>
+	{
+		public override string Id { get; protected set; } = "minecraft:brown_concrete_powder";
+	}
+
 	public partial class ItemBrownDye : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:brown_dye";
@@ -719,6 +764,21 @@ namespace MiNET.Items
 	public partial class ItemBrownShulkerBox : ItemBlock<BrownShulkerBox>
 	{
 		public override string Id { get; protected set; } = "minecraft:brown_shulker_box";
+	}
+
+	public partial class ItemBrownStainedGlass : ItemBlock<BrownStainedGlass>
+	{
+		public override string Id { get; protected set; } = "minecraft:brown_stained_glass";
+	}
+
+	public partial class ItemBrownStainedGlassPane : ItemBlock<BrownStainedGlassPane>
+	{
+		public override string Id { get; protected set; } = "minecraft:brown_stained_glass_pane";
+	}
+
+	public partial class ItemBrownTerracotta : ItemBlock<BrownTerracotta>
+	{
+		public override string Id { get; protected set; } = "minecraft:brown_terracotta";
 	}
 
 	public partial class ItemBrownWool : ItemBlock<BrownWool>
@@ -1210,7 +1270,7 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:concrete";
 	}
 
-	public partial class ItemConcretePowder : ItemBlock<ConcretePowder>
+	public partial class ItemConcretePowder : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:concrete_powder";
 	}
@@ -1487,6 +1547,11 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:cyan_concrete";
 	}
 
+	public partial class ItemCyanConcretePowder : ItemBlock<CyanConcretePowder>
+	{
+		public override string Id { get; protected set; } = "minecraft:cyan_concrete_powder";
+	}
+
 	public partial class ItemCyanDye : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:cyan_dye";
@@ -1500,6 +1565,21 @@ namespace MiNET.Items
 	public partial class ItemCyanShulkerBox : ItemBlock<CyanShulkerBox>
 	{
 		public override string Id { get; protected set; } = "minecraft:cyan_shulker_box";
+	}
+
+	public partial class ItemCyanStainedGlass : ItemBlock<CyanStainedGlass>
+	{
+		public override string Id { get; protected set; } = "minecraft:cyan_stained_glass";
+	}
+
+	public partial class ItemCyanStainedGlassPane : ItemBlock<CyanStainedGlassPane>
+	{
+		public override string Id { get; protected set; } = "minecraft:cyan_stained_glass_pane";
+	}
+
+	public partial class ItemCyanTerracotta : ItemBlock<CyanTerracotta>
+	{
+		public override string Id { get; protected set; } = "minecraft:cyan_terracotta";
 	}
 
 	public partial class ItemCyanWool : ItemBlock<CyanWool>
@@ -3146,6 +3226,11 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:gray_concrete";
 	}
 
+	public partial class ItemGrayConcretePowder : ItemBlock<GrayConcretePowder>
+	{
+		public override string Id { get; protected set; } = "minecraft:gray_concrete_powder";
+	}
+
 	public partial class ItemGrayDye : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:gray_dye";
@@ -3159,6 +3244,21 @@ namespace MiNET.Items
 	public partial class ItemGrayShulkerBox : ItemBlock<GrayShulkerBox>
 	{
 		public override string Id { get; protected set; } = "minecraft:gray_shulker_box";
+	}
+
+	public partial class ItemGrayStainedGlass : ItemBlock<GrayStainedGlass>
+	{
+		public override string Id { get; protected set; } = "minecraft:gray_stained_glass";
+	}
+
+	public partial class ItemGrayStainedGlassPane : ItemBlock<GrayStainedGlassPane>
+	{
+		public override string Id { get; protected set; } = "minecraft:gray_stained_glass_pane";
+	}
+
+	public partial class ItemGrayTerracotta : ItemBlock<GrayTerracotta>
+	{
+		public override string Id { get; protected set; } = "minecraft:gray_terracotta";
 	}
 
 	public partial class ItemGrayWool : ItemBlock<GrayWool>
@@ -3188,6 +3288,11 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:green_concrete";
 	}
 
+	public partial class ItemGreenConcretePowder : ItemBlock<GreenConcretePowder>
+	{
+		public override string Id { get; protected set; } = "minecraft:green_concrete_powder";
+	}
+
 	public partial class ItemGreenDye : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:green_dye";
@@ -3201,6 +3306,21 @@ namespace MiNET.Items
 	public partial class ItemGreenShulkerBox : ItemBlock<GreenShulkerBox>
 	{
 		public override string Id { get; protected set; } = "minecraft:green_shulker_box";
+	}
+
+	public partial class ItemGreenStainedGlass : ItemBlock<GreenStainedGlass>
+	{
+		public override string Id { get; protected set; } = "minecraft:green_stained_glass";
+	}
+
+	public partial class ItemGreenStainedGlassPane : ItemBlock<GreenStainedGlassPane>
+	{
+		public override string Id { get; protected set; } = "minecraft:green_stained_glass_pane";
+	}
+
+	public partial class ItemGreenTerracotta : ItemBlock<GreenTerracotta>
+	{
+		public override string Id { get; protected set; } = "minecraft:green_terracotta";
 	}
 
 	public partial class ItemGreenWool : ItemBlock<GreenWool>
@@ -3901,6 +4021,11 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:light_blue_concrete";
 	}
 
+	public partial class ItemLightBlueConcretePowder : ItemBlock<LightBlueConcretePowder>
+	{
+		public override string Id { get; protected set; } = "minecraft:light_blue_concrete_powder";
+	}
+
 	public partial class ItemLightBlueDye : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:light_blue_dye";
@@ -3914,6 +4039,21 @@ namespace MiNET.Items
 	public partial class ItemLightBlueShulkerBox : ItemBlock<LightBlueShulkerBox>
 	{
 		public override string Id { get; protected set; } = "minecraft:light_blue_shulker_box";
+	}
+
+	public partial class ItemLightBlueStainedGlass : ItemBlock<LightBlueStainedGlass>
+	{
+		public override string Id { get; protected set; } = "minecraft:light_blue_stained_glass";
+	}
+
+	public partial class ItemLightBlueStainedGlassPane : ItemBlock<LightBlueStainedGlassPane>
+	{
+		public override string Id { get; protected set; } = "minecraft:light_blue_stained_glass_pane";
+	}
+
+	public partial class ItemLightBlueTerracotta : ItemBlock<LightBlueTerracotta>
+	{
+		public override string Id { get; protected set; } = "minecraft:light_blue_terracotta";
 	}
 
 	public partial class ItemLightBlueWool : ItemBlock<LightBlueWool>
@@ -3943,6 +4083,11 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:light_gray_concrete";
 	}
 
+	public partial class ItemLightGrayConcretePowder : ItemBlock<LightGrayConcretePowder>
+	{
+		public override string Id { get; protected set; } = "minecraft:light_gray_concrete_powder";
+	}
+
 	public partial class ItemLightGrayDye : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:light_gray_dye";
@@ -3951,6 +4096,21 @@ namespace MiNET.Items
 	public partial class ItemLightGrayShulkerBox : ItemBlock<LightGrayShulkerBox>
 	{
 		public override string Id { get; protected set; } = "minecraft:light_gray_shulker_box";
+	}
+
+	public partial class ItemLightGrayStainedGlass : ItemBlock<LightGrayStainedGlass>
+	{
+		public override string Id { get; protected set; } = "minecraft:light_gray_stained_glass";
+	}
+
+	public partial class ItemLightGrayStainedGlassPane : ItemBlock<LightGrayStainedGlassPane>
+	{
+		public override string Id { get; protected set; } = "minecraft:light_gray_stained_glass_pane";
+	}
+
+	public partial class ItemLightGrayTerracotta : ItemBlock<LightGrayTerracotta>
+	{
+		public override string Id { get; protected set; } = "minecraft:light_gray_terracotta";
 	}
 
 	public partial class ItemLightGrayWool : ItemBlock<LightGrayWool>
@@ -3990,6 +4150,11 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:lime_concrete";
 	}
 
+	public partial class ItemLimeConcretePowder : ItemBlock<LimeConcretePowder>
+	{
+		public override string Id { get; protected set; } = "minecraft:lime_concrete_powder";
+	}
+
 	public partial class ItemLimeDye : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:lime_dye";
@@ -4003,6 +4168,21 @@ namespace MiNET.Items
 	public partial class ItemLimeShulkerBox : ItemBlock<LimeShulkerBox>
 	{
 		public override string Id { get; protected set; } = "minecraft:lime_shulker_box";
+	}
+
+	public partial class ItemLimeStainedGlass : ItemBlock<LimeStainedGlass>
+	{
+		public override string Id { get; protected set; } = "minecraft:lime_stained_glass";
+	}
+
+	public partial class ItemLimeStainedGlassPane : ItemBlock<LimeStainedGlassPane>
+	{
+		public override string Id { get; protected set; } = "minecraft:lime_stained_glass_pane";
+	}
+
+	public partial class ItemLimeTerracotta : ItemBlock<LimeTerracotta>
+	{
+		public override string Id { get; protected set; } = "minecraft:lime_terracotta";
 	}
 
 	public partial class ItemLimeWool : ItemBlock<LimeWool>
@@ -4102,6 +4282,11 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:magenta_concrete";
 	}
 
+	public partial class ItemMagentaConcretePowder : ItemBlock<MagentaConcretePowder>
+	{
+		public override string Id { get; protected set; } = "minecraft:magenta_concrete_powder";
+	}
+
 	public partial class ItemMagentaDye : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:magenta_dye";
@@ -4115,6 +4300,21 @@ namespace MiNET.Items
 	public partial class ItemMagentaShulkerBox : ItemBlock<MagentaShulkerBox>
 	{
 		public override string Id { get; protected set; } = "minecraft:magenta_shulker_box";
+	}
+
+	public partial class ItemMagentaStainedGlass : ItemBlock<MagentaStainedGlass>
+	{
+		public override string Id { get; protected set; } = "minecraft:magenta_stained_glass";
+	}
+
+	public partial class ItemMagentaStainedGlassPane : ItemBlock<MagentaStainedGlassPane>
+	{
+		public override string Id { get; protected set; } = "minecraft:magenta_stained_glass_pane";
+	}
+
+	public partial class ItemMagentaTerracotta : ItemBlock<MagentaTerracotta>
+	{
+		public override string Id { get; protected set; } = "minecraft:magenta_terracotta";
 	}
 
 	public partial class ItemMagentaWool : ItemBlock<MagentaWool>
@@ -4746,6 +4946,11 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:orange_concrete";
 	}
 
+	public partial class ItemOrangeConcretePowder : ItemBlock<OrangeConcretePowder>
+	{
+		public override string Id { get; protected set; } = "minecraft:orange_concrete_powder";
+	}
+
 	public partial class ItemOrangeDye : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:orange_dye";
@@ -4759,6 +4964,21 @@ namespace MiNET.Items
 	public partial class ItemOrangeShulkerBox : ItemBlock<OrangeShulkerBox>
 	{
 		public override string Id { get; protected set; } = "minecraft:orange_shulker_box";
+	}
+
+	public partial class ItemOrangeStainedGlass : ItemBlock<OrangeStainedGlass>
+	{
+		public override string Id { get; protected set; } = "minecraft:orange_stained_glass";
+	}
+
+	public partial class ItemOrangeStainedGlassPane : ItemBlock<OrangeStainedGlassPane>
+	{
+		public override string Id { get; protected set; } = "minecraft:orange_stained_glass_pane";
+	}
+
+	public partial class ItemOrangeTerracotta : ItemBlock<OrangeTerracotta>
+	{
+		public override string Id { get; protected set; } = "minecraft:orange_terracotta";
 	}
 
 	public partial class ItemOrangeWool : ItemBlock<OrangeWool>
@@ -4883,6 +5103,11 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:pink_concrete";
 	}
 
+	public partial class ItemPinkConcretePowder : ItemBlock<PinkConcretePowder>
+	{
+		public override string Id { get; protected set; } = "minecraft:pink_concrete_powder";
+	}
+
 	public partial class ItemPinkDye : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:pink_dye";
@@ -4901,6 +5126,21 @@ namespace MiNET.Items
 	public partial class ItemPinkShulkerBox : ItemBlock<PinkShulkerBox>
 	{
 		public override string Id { get; protected set; } = "minecraft:pink_shulker_box";
+	}
+
+	public partial class ItemPinkStainedGlass : ItemBlock<PinkStainedGlass>
+	{
+		public override string Id { get; protected set; } = "minecraft:pink_stained_glass";
+	}
+
+	public partial class ItemPinkStainedGlassPane : ItemBlock<PinkStainedGlassPane>
+	{
+		public override string Id { get; protected set; } = "minecraft:pink_stained_glass_pane";
+	}
+
+	public partial class ItemPinkTerracotta : ItemBlock<PinkTerracotta>
+	{
+		public override string Id { get; protected set; } = "minecraft:pink_terracotta";
 	}
 
 	public partial class ItemPinkWool : ItemBlock<PinkWool>
@@ -5205,6 +5445,11 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:purple_concrete";
 	}
 
+	public partial class ItemPurpleConcretePowder : ItemBlock<PurpleConcretePowder>
+	{
+		public override string Id { get; protected set; } = "minecraft:purple_concrete_powder";
+	}
+
 	public partial class ItemPurpleDye : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:purple_dye";
@@ -5218,6 +5463,21 @@ namespace MiNET.Items
 	public partial class ItemPurpleShulkerBox : ItemBlock<PurpleShulkerBox>
 	{
 		public override string Id { get; protected set; } = "minecraft:purple_shulker_box";
+	}
+
+	public partial class ItemPurpleStainedGlass : ItemBlock<PurpleStainedGlass>
+	{
+		public override string Id { get; protected set; } = "minecraft:purple_stained_glass";
+	}
+
+	public partial class ItemPurpleStainedGlassPane : ItemBlock<PurpleStainedGlassPane>
+	{
+		public override string Id { get; protected set; } = "minecraft:purple_stained_glass_pane";
+	}
+
+	public partial class ItemPurpleTerracotta : ItemBlock<PurpleTerracotta>
+	{
+		public override string Id { get; protected set; } = "minecraft:purple_terracotta";
 	}
 
 	public partial class ItemPurpleWool : ItemBlock<PurpleWool>
@@ -5362,6 +5622,11 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:red_concrete";
 	}
 
+	public partial class ItemRedConcretePowder : ItemBlock<RedConcretePowder>
+	{
+		public override string Id { get; protected set; } = "minecraft:red_concrete_powder";
+	}
+
 	public partial class ItemRedDye : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:red_dye";
@@ -5410,6 +5675,21 @@ namespace MiNET.Items
 	public partial class ItemRedShulkerBox : ItemBlock<RedShulkerBox>
 	{
 		public override string Id { get; protected set; } = "minecraft:red_shulker_box";
+	}
+
+	public partial class ItemRedStainedGlass : ItemBlock<RedStainedGlass>
+	{
+		public override string Id { get; protected set; } = "minecraft:red_stained_glass";
+	}
+
+	public partial class ItemRedStainedGlassPane : ItemBlock<RedStainedGlassPane>
+	{
+		public override string Id { get; protected set; } = "minecraft:red_stained_glass_pane";
+	}
+
+	public partial class ItemRedTerracotta : ItemBlock<RedTerracotta>
+	{
+		public override string Id { get; protected set; } = "minecraft:red_terracotta";
 	}
 
 	public partial class ItemRedWool : ItemBlock<RedWool>
@@ -5902,17 +6182,17 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:squid_spawn_egg";
 	}
 
-	public partial class ItemStainedGlass : ItemBlock<StainedGlass>
+	public partial class ItemStainedGlass : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:stained_glass";
 	}
 
-	public partial class ItemStainedGlassPane : ItemBlock<StainedGlassPane>
+	public partial class ItemStainedGlassPane : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:stained_glass_pane";
 	}
 
-	public partial class ItemStainedHardenedClay : ItemBlock<StainedHardenedClay>
+	public partial class ItemStainedHardenedClay : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:stained_hardened_clay";
 	}
@@ -6705,6 +6985,11 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:white_concrete";
 	}
 
+	public partial class ItemWhiteConcretePowder : ItemBlock<WhiteConcretePowder>
+	{
+		public override string Id { get; protected set; } = "minecraft:white_concrete_powder";
+	}
+
 	public partial class ItemWhiteDye : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:white_dye";
@@ -6718,6 +7003,21 @@ namespace MiNET.Items
 	public partial class ItemWhiteShulkerBox : ItemBlock<WhiteShulkerBox>
 	{
 		public override string Id { get; protected set; } = "minecraft:white_shulker_box";
+	}
+
+	public partial class ItemWhiteStainedGlass : ItemBlock<WhiteStainedGlass>
+	{
+		public override string Id { get; protected set; } = "minecraft:white_stained_glass";
+	}
+
+	public partial class ItemWhiteStainedGlassPane : ItemBlock<WhiteStainedGlassPane>
+	{
+		public override string Id { get; protected set; } = "minecraft:white_stained_glass_pane";
+	}
+
+	public partial class ItemWhiteTerracotta : ItemBlock<WhiteTerracotta>
+	{
+		public override string Id { get; protected set; } = "minecraft:white_terracotta";
 	}
 
 	public partial class ItemWhiteWool : ItemBlock<WhiteWool>
@@ -6871,6 +7171,11 @@ namespace MiNET.Items
 		public override string Id { get; protected set; } = "minecraft:yellow_concrete";
 	}
 
+	public partial class ItemYellowConcretePowder : ItemBlock<YellowConcretePowder>
+	{
+		public override string Id { get; protected set; } = "minecraft:yellow_concrete_powder";
+	}
+
 	public partial class ItemYellowDye : Item
 	{
 		public override string Id { get; protected set; } = "minecraft:yellow_dye";
@@ -6889,6 +7194,21 @@ namespace MiNET.Items
 	public partial class ItemYellowShulkerBox : ItemBlock<YellowShulkerBox>
 	{
 		public override string Id { get; protected set; } = "minecraft:yellow_shulker_box";
+	}
+
+	public partial class ItemYellowStainedGlass : ItemBlock<YellowStainedGlass>
+	{
+		public override string Id { get; protected set; } = "minecraft:yellow_stained_glass";
+	}
+
+	public partial class ItemYellowStainedGlassPane : ItemBlock<YellowStainedGlassPane>
+	{
+		public override string Id { get; protected set; } = "minecraft:yellow_stained_glass_pane";
+	}
+
+	public partial class ItemYellowTerracotta : ItemBlock<YellowTerracotta>
+	{
+		public override string Id { get; protected set; } = "minecraft:yellow_terracotta";
 	}
 
 	public partial class ItemYellowWool : ItemBlock<YellowWool>

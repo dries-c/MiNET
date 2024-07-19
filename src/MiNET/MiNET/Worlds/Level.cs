@@ -1107,7 +1107,7 @@ namespace MiNET.Worlds
 			if (chunk == null) return true;
 
 			int bid = chunk.GetBlockRuntimeId(blockCoordinates.X & 0x0f, blockCoordinates.Y, blockCoordinates.Z & 0x0f);
-			return BlockFactory.IsBlock<Air>(bid) || BlockFactory.IsBlock<Glass>(bid) || BlockFactory.IsBlock<StainedGlass>(bid); // Need this for skylight calculations. Revise!
+			return BlockFactory.IsBlock<Air>(bid) || BlockFactory.IsBlock<Glass>(bid) || BlockFactory.IsBlock<StainedGlassBase>(bid); // Need this for skylight calculations. Revise!
 		}
 
 		public bool IsTransparent(BlockCoordinates blockCoordinates)

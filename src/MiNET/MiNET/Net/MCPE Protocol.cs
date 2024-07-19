@@ -47,8 +47,8 @@ namespace MiNET.Net
 {
 	public class McpeProtocolInfo
 	{
-		public const int ProtocolVersion = 594;
-		public const string GameVersion = "1.20.15";
+		public const int ProtocolVersion = 618;
+		public const string GameVersion = "1.20.30";
 	}
 
 	public interface IMcpeMessageHandler
@@ -2197,6 +2197,7 @@ namespace MiNET.Net
 		public bool forceServerPacks; // = null;
 		public ResourcePackInfos behahaviorpackinfos; // = null;
 		public TexturePackInfos texturepacks; // = null;
+		public CdnUrls cdnUrls; // = null;
 
 		public McpeResourcePacksInfo()
 		{
@@ -2215,6 +2216,7 @@ namespace MiNET.Net
 			Write(forceServerPacks);
 			Write(behahaviorpackinfos);
 			Write(texturepacks);
+			Write(cdnUrls);
 
 			AfterEncode();
 		}
@@ -2233,6 +2235,7 @@ namespace MiNET.Net
 			forceServerPacks = ReadBool();
 			behahaviorpackinfos = ReadResourcePackInfos();
 			texturepacks = ReadTexturePackInfos();
+			cdnUrls = ReadCdnUrls();
 
 			AfterDecode();
 		}
@@ -2249,6 +2252,7 @@ namespace MiNET.Net
 			forceServerPacks=default(bool);
 			behahaviorpackinfos=default(ResourcePackInfos);
 			texturepacks=default(TexturePackInfos);
+			cdnUrls=default(CdnUrls);
 		}
 
 	}
