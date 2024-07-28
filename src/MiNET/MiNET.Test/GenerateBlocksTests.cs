@@ -54,12 +54,12 @@ namespace MiNET.Test
 				}
 			}
 
-			Item item = ItemFactory.GetItem("minecraft:sapling");
-			Assert.AreEqual("minecraft:sapling", item.Id);
+			Item item = ItemFactory.GetItem("minecraft:oak_sapling");
+			Assert.AreEqual("minecraft:oak_sapling", item.Id);
 			Assert.IsInstanceOfType(item, typeof(ItemBlock));
 
 			var itemBlock = item as ItemBlock;
-			Assert.IsInstanceOfType(itemBlock.Block, typeof(Sapling));
+			Assert.IsInstanceOfType(itemBlock.Block, typeof(OakSapling));
 		}
 
 		[TestMethod]
@@ -501,6 +501,10 @@ namespace MiNET.Test
 			if (id.EndsWith("_leaves"))
 			{
 				return nameof(LeavesBase);
+			}
+			if (id.EndsWith("_sapling"))
+			{
+				return nameof(SaplingBase);
 			}
 
 			return nameof(Block);
