@@ -1396,6 +1396,7 @@ namespace MiNET.Net
 		public readonly byte[] offlineMessageDataId = new byte[]{ 0x00, 0xff, 0xff, 0x00, 0xfe, 0xfe, 0xfe, 0xfe, 0xfd, 0xfd, 0xfd, 0xfd, 0x12, 0x34, 0x56, 0x78 }; // = { 0x00, 0xff, 0xff, 0x00, 0xfe, 0xfe, 0xfe, 0xfe, 0xfd, 0xfd, 0xfd, 0xfd, 0x12, 0x34, 0x56, 0x78 };
 		public long serverGuid; // = null;
 		public byte serverHasSecurity; // = null;
+		public int cookie; // = null;
 		public short mtuSize; // = null;
 
 		public OpenConnectionReply1()
@@ -1413,6 +1414,10 @@ namespace MiNET.Net
 			Write(offlineMessageDataId);
 			Write(serverGuid);
 			Write(serverHasSecurity);
+			if (serverHasSecurity == 1)
+			{
+				WriteBe(cookie);
+			}
 			WriteBe(mtuSize);
 
 			AfterEncode();
@@ -1430,6 +1435,10 @@ namespace MiNET.Net
 			ReadBytes(offlineMessageDataId.Length);
 			serverGuid = ReadLong();
 			serverHasSecurity = ReadByte();
+			if(serverHasSecurity == 1)
+			{
+				cookie = ReadInt(true);
+			}
 			mtuSize = ReadShortBe();
 
 			AfterDecode();
@@ -1444,6 +1453,7 @@ namespace MiNET.Net
 
 			serverGuid=default(long);
 			serverHasSecurity=default(byte);
+			cookie=default(int);
 			mtuSize=default(short);
 		}
 
@@ -1454,6 +1464,8 @@ namespace MiNET.Net
 
 		public readonly byte[] offlineMessageDataId = new byte[]{ 0x00, 0xff, 0xff, 0x00, 0xfe, 0xfe, 0xfe, 0xfe, 0xfd, 0xfd, 0xfd, 0xfd, 0x12, 0x34, 0x56, 0x78 }; // = { 0x00, 0xff, 0xff, 0x00, 0xfe, 0xfe, 0xfe, 0xfe, 0xfd, 0xfd, 0xfd, 0xfd, 0x12, 0x34, 0x56, 0x78 };
 		public IPEndPoint remoteBindingAddress; // = null;
+		public byte serverHasSecurity; // = null;
+		public int cookie; // = null;
 		public short mtuSize; // = null;
 		public long clientGuid; // = null;
 
@@ -1470,6 +1482,11 @@ namespace MiNET.Net
 			BeforeEncode();
 
 			Write(offlineMessageDataId);
+			if(serverHasSecurity == 1)
+			{
+				WriteBe(cookie);
+				Write(false);
+			}
 			Write(remoteBindingAddress);
 			WriteBe(mtuSize);
 			Write(clientGuid);
@@ -1487,6 +1504,11 @@ namespace MiNET.Net
 			BeforeDecode();
 
 			ReadBytes(offlineMessageDataId.Length);
+			if(serverHasSecurity == 1)
+			{
+				cookie = ReadInt(true);
+				ReadByte();
+			}
 			remoteBindingAddress = ReadIPEndPoint();
 			mtuSize = ReadShortBe();
 			clientGuid = ReadLong();
@@ -1502,6 +1524,8 @@ namespace MiNET.Net
 			base.ResetPacket();
 
 			remoteBindingAddress=default(IPEndPoint);
+			serverHasSecurity=default(byte);
+			cookie=default(int);
 			mtuSize=default(short);
 			clientGuid=default(long);
 		}
