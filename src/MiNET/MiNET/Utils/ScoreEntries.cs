@@ -63,15 +63,7 @@ namespace MiNET.Utils
 				case Types.Change:
 					for (var i = 0; i < count; i++)
 					{
-						var changeType = (ChangeTypes) packet.ReadByte();
-						entries.Add(changeType switch
-						{
-							ChangeTypes.Player => ScoreEntryChangePlayer.Read(packet),
-							ChangeTypes.Entity => ScoreEntryChangeEntity.Read(packet),
-							ChangeTypes.FakePlayer => ScoreEntryChangeFakePlayer.Read(packet),
-
-							_ => throw new Exception($"Unexpected score entry change type = [{changeType}]")
-						});
+						entries.Add(ScoreEntry.Read(packet));
 					}
 
 					break;
@@ -101,23 +93,43 @@ namespace MiNET.Utils
 		}
 
 		protected virtual void WriteData(Packet packet) { }
+		
+		protected virtual void ReadData(Packet packet) { }
 
-		protected static TEntry ReadData<TEntry>(Packet packet) where TEntry : ScoreEntry, new()
+		public static ScoreEntry Read(Packet packet)
 		{
-			return new TEntry()
+			long id = packet.ReadSignedVarLong();
+			string objectiveName = packet.ReadString();
+			uint score = packet.ReadUint();
+			ChangeTypes changeType = (ChangeTypes) packet.ReadByte();
+			
+			ScoreEntry entry = changeType switch
 			{
-				Id = packet.ReadSignedVarLong(),
-				ObjectiveName = packet.ReadString(),
-				Score = packet.ReadUint()
+				ChangeTypes.Player => new ScoreEntryChangePlayer(),
+				ChangeTypes.Entity => new ScoreEntryChangeEntity(),
+				ChangeTypes.FakePlayer => new ScoreEntryChangeFakePlayer(),
+				_ => throw new Exception($"Unexpected score entry change type = [{changeType}]")
 			};
+			
+			entry.Id = id;
+			entry.ObjectiveName = objectiveName;
+			entry.Score = score;
+			entry.ReadData(packet);
+			
+			return entry;
 		}
 	}
 
 	public class ScoreEntryRemove : ScoreEntry
 	{
-		public static ScoreEntry Read(Packet packet)
+		public static new ScoreEntry Read(Packet packet)
 		{
-			return ReadData<ScoreEntryRemove>(packet);
+			return new ScoreEntryRemove()
+			{
+				Id = packet.ReadSignedVarLong(),
+				ObjectiveName = packet.ReadString(),
+				Score = packet.ReadUint()
+			};
 		}
 	}
 
@@ -135,13 +147,9 @@ namespace MiNET.Utils
 			packet.WriteEntityId(EntityId);
 		}
 
-		public static ScoreEntry Read(Packet packet)
+		protected override void ReadData(Packet packet)
 		{
-			var entry = ReadData<ScoreEntryChangePlayer>(packet);
-
-			entry.EntityId = packet.ReadEntityId();
-
-			return entry;
+			EntityId = packet.ReadEntityId();
 		}
 	}
 
@@ -155,13 +163,9 @@ namespace MiNET.Utils
 			packet.WriteEntityId(EntityId);
 		}
 
-		public static ScoreEntry Read(Packet packet)
+		protected override void ReadData(Packet packet)
 		{
-			var entry = ReadData<ScoreEntryChangeEntity>(packet);
-
-			entry.EntityId = packet.ReadEntityId();
-
-			return entry;
+			EntityId = packet.ReadEntityId();
 		}
 	}
 
@@ -175,13 +179,9 @@ namespace MiNET.Utils
 			packet.Write(CustomName);
 		}
 
-		public static ScoreEntry Read(Packet packet)
+		protected override void ReadData(Packet packet)
 		{
-			var entry = ReadData<ScoreEntryChangeFakePlayer>(packet);
-
-			entry.CustomName = packet.ReadString();
-
-			return entry;
+			CustomName = packet.ReadString();
 		}
 	}
 
