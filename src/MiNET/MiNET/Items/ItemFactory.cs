@@ -135,6 +135,8 @@ namespace MiNET.Items
 
 		private static Item GetItem(string id, short metadata = 0, int count = 1, Block block = null)
 		{
+			if (id == null) return GetItem("minecraft:air", metadata, count);
+			
 			if (CustomItemFactory != null)
 			{
 				var customItem = CustomItemFactory.GetItem(id, metadata, count);
