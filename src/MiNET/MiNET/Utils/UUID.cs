@@ -64,9 +64,8 @@ namespace MiNET.Utils
 
 		public byte[] GetBytes()
 		{
-			var bytes = new byte[0];
-			return bytes.Concat(BitConverter.GetBytes(_a).Reverse())
-				.Concat(BitConverter.GetBytes(_b).Reverse())
+			return BitConverter.GetBytes(_a).AsEnumerable().Reverse()
+				.Concat(BitConverter.GetBytes(_b).AsEnumerable().Reverse())
 				.ToArray();
 		}
 
